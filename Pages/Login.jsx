@@ -73,8 +73,8 @@ function Login() {
       </View>
       <View style={styles.dot}>
         <Image source={require("../assets/Ellipse5.png")} />
+        <Image source={require("../assets/Ellipse7.png")} style={{ marginRight: 10, marginLeft: 10 }} />
         <Image source={require("../assets/Ellipse6.png")} />
-        <Image source={require("../assets/Ellipse7.png")} />
       </View>
     </View>
   );
@@ -85,7 +85,6 @@ export default Login;
 const styles = StyleSheet.create({
   content: {
     flex: 1,
-    backgroundColor: "#FFF8F9",
     marginTop: 150,
   },
   login: {
@@ -100,12 +99,13 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     fontSize: 20,
     letterSpacing: 0.1,
-    marginLeft: 20,
-    marginBottom: 20,
+    marginLeft: 25,
+    marginBottom: 10,
     fontFamily: "Poppins_400Regular",
+    paddingTop: 10,
   },
   username: {
-    marginLeft: 20,
+    marginLeft: 24,
     display: "flex",
     borderBottomWidth: 2,
     width: 320,
@@ -144,13 +144,19 @@ const styles = StyleSheet.create({
     textAlign: "center",
     alignSelf: "center",
     textDecorationLine: "underline",
-    width: 150,
+    width: 170,
     borderColor: "black",
     marginTop: 20,
   },
   img: {
     alignSelf: "center",
     marginTop: 20,
+    flexDirection: "row",
+  },
+  dot: {
+    marginTop: 60,
+    alignSelf: "center",
+    justifyContent: "center",
     flexDirection: "row",
   },
 });

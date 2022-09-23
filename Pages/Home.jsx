@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, Image, ImageBackground, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Button, Image, ImageBackground, TouchableOpacity, LinearGradient } from "react-native";
 import React, { useState } from "react";
 import {
   Poppins_100Thin,
@@ -49,13 +49,20 @@ const Home = () => {
   }
   return (
     <ImageBackground source={require("../assets/iponcuy.png")} style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.judul}>Yo fellas!</Text>
-        <Text style={styles.looking}>Looking for something cool?</Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Get Started</Text>
-        </TouchableOpacity>
-      </View>
+      <ImageBackground source={require("../assets/gradient.png")} style={styles.gradient}>
+        <View style={styles.content}>
+          <Text style={styles.judul}>Yo fellas!</Text>
+          <Text style={styles.looking}>Looking for something cool?</Text>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Get Started</Text>
+          </TouchableOpacity>
+          <View style={styles.dot}>
+            <Image source={require("../assets/Ellipse7.png")} />
+            <Image source={require("../assets/Ellipse6.png")} style={{ marginRight: 10, marginLeft: 10 }} />
+            <Image source={require("../assets/Ellipse5.png")} />
+          </View>
+        </View>
+      </ImageBackground>
     </ImageBackground>
   );
 };
@@ -65,9 +72,14 @@ export default Home;
 const styles = StyleSheet.create({
   content: {
     marginTop: 550,
+    paddingBottom: 85,
     justifyContent: "center",
     alignItems: "center",
   },
+  gradient: {
+    marginTop: "auto",
+  },
+
   judul: {
     fontSize: 60,
     color: "#FFF",
@@ -105,9 +117,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   looking: {
-    fontSize: 17,
+    fontSize: 16,
     color: "#FFF",
     padding: 10,
     fontFamily: "Poppins_400Regular",
+  },
+  dot: {
+    marginTop: 40,
+    alignSelf: "center",
+    justifyContent: "center",
+    flexDirection: "row",
   },
 });

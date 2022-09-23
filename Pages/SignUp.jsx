@@ -72,6 +72,11 @@ function SignUp() {
         <Text style={styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
       <Text style={styles.acc}>Already have an account?</Text>
+      <View style={styles.dot}>
+        <Image source={require("../assets/Ellipse5.png")} />
+        <Image source={require("../assets/Ellipse6.png")} style={{ marginRight: 10, marginLeft: 10 }} />
+        <Image source={require("../assets/Ellipse7.png")} />
+      </View>
     </View>
   );
 }
@@ -98,7 +103,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.1,
     marginLeft: 20,
     marginBottom: 20,
-    fontFamily: " Poppins_600SemiBold",
+    fontFamily: "Poppins_600SemiBold",
     color: "black",
   },
   username: {
@@ -140,5 +145,11 @@ const styles = StyleSheet.create({
     width: 200,
     borderColor: "black",
     marginTop: 20,
+  },
+  dot: {
+    marginTop: 60,
+    alignSelf: "center",
+    justifyContent: "center",
+    flexDirection: "row",
   },
 });

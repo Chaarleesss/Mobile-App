@@ -5,7 +5,7 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 
 export default function App() {
-  return <Login />;
+  return <Home />;
 }
 
 const styles = StyleSheet.create({
