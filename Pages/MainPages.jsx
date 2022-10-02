@@ -1,20 +1,22 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity, LinearGradient, Image, TextInput } from "react-native";
+import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity, LinearGradient, Image, TextInput, Keyboard, TouchableWithoutFeedback } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { BiSearch } from "react-icons/bs";
 
 function MainPages() {
   return (
-    <View style={styles.container}>
-      <Image style={styles.profile} source={require("../assets/charles.jpg")} />
-      <Text style={styles.welcome}>Welcome back Charles!</Text>
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.container}>
+        <Image style={styles.profile} source={require("../assets/charles.jpg")} />
+        <Text style={styles.welcome}>Welcome back Charles!</Text>
 
-      <Text style={styles.explore}>Explore the Rpl’s leading{"\n"}design portfolios</Text>
-      <View style={styles.bar}>
-        <AntDesign name="search1" size={24} color="black" />
-        <TextInput style={styles.search} placeholder="Web Design, Design Graphic"></TextInput>
+        <Text style={styles.explore}>Explore the Rpl’s leading{"\n"}design portfolios</Text>
+        <View style={styles.bar}>
+          <AntDesign name="search1" size={24} color="black" />
+          <TextInput style={styles.search} placeholder="Web Design, Design Graphic"></TextInput>
+        </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
 
