@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, Keyboard, TouchableWithoutFeedback } from "react-native";
 import { AiOutlineUser } from "react-icons/ai";
 import { AntDesign } from "@expo/vector-icons";
 import {
@@ -50,34 +50,36 @@ function SignUp() {
     return <AppLoading />;
   }
   return (
-    <View style={styles.content}>
-      <Text style={styles.SignUp}>Sign Up</Text>
-      <Text style={styles.userfirst}>Username</Text>
-      <View style={styles.username}>
-        <AntDesign name="user" size={24} color="black" styles={{}} />
-        <TextInput style={styles.inputuser} placeholder="username"></TextInput>
-      </View>
-      <Text style={styles.userfirst}>Password</Text>
-      <View style={styles.username}>
-        <AntDesign name="lock" size={24} color="black" />
-        <TextInput style={styles.inputuser} secureTextEntry={true} placeholder="password"></TextInput>
-      </View>
-      <Text style={styles.userfirst}>Verified Password</Text>
-      <View style={styles.username}>
-        <AntDesign name="lock" size={24} color="black" />
-        <TextInput style={styles.inputuser} secureTextEntry={true} placeholder="password"></TextInput>
-      </View>
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.content}>
+        <Text style={styles.SignUp}>Sign Up</Text>
+        <Text style={styles.userfirst}>Username</Text>
+        <View style={styles.username}>
+          <AntDesign name="user" size={24} color="black" styles={{}} />
+          <TextInput style={styles.inputuser} placeholder="username"></TextInput>
+        </View>
+        <Text style={styles.userfirst}>Password</Text>
+        <View style={styles.username}>
+          <AntDesign name="lock" size={24} color="black" />
+          <TextInput style={styles.inputuser} secureTextEntry={true} placeholder="password"></TextInput>
+        </View>
+        <Text style={styles.userfirst}>Verified Password</Text>
+        <View style={styles.username}>
+          <AntDesign name="lock" size={24} color="black" />
+          <TextInput style={styles.inputuser} secureTextEntry={true} placeholder="password"></TextInput>
+        </View>
 
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Sign Up</Text>
-      </TouchableOpacity>
-      <Text style={styles.acc}>Already have an account?</Text>
-      <View style={styles.dot}>
-        <Image source={require("../assets/Ellipse5.png")} />
-        <Image source={require("../assets/Ellipse6.png")} style={{ marginRight: 10, marginLeft: 10 }} />
-        <Image source={require("../assets/Ellipse7.png")} />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Sign Up</Text>
+        </TouchableOpacity>
+        <Text style={styles.acc}>Already have an account?</Text>
+        <View style={styles.dot}>
+          <Image source={require("../assets/Ellipse5.png")} />
+          <Image source={require("../assets/Ellipse6.png")} style={{ marginRight: 10, marginLeft: 10 }} />
+          <Image source={require("../assets/Ellipse7.png")} />
+        </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
 
