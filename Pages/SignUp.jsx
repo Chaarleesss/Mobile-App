@@ -24,31 +24,10 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-function SignUp() {
-  let [fontsloaded, error] = useFonts({
-    Poppins_100Thin,
-    Poppins_100Thin_Italic,
-    Poppins_200ExtraLight,
-    Poppins_200ExtraLight_Italic,
-    Poppins_300Light,
-    Poppins_300Light_Italic,
-    Poppins_400Regular,
-    Poppins_400Regular_Italic,
-    Poppins_500Medium,
-    Poppins_500Medium_Italic,
-    Poppins_600SemiBold,
-    Poppins_600SemiBold_Italic,
-    Poppins_700Bold,
-    Poppins_700Bold_Italic,
-    Poppins_800ExtraBold,
-    Poppins_800ExtraBold_Italic,
-    Poppins_900Black,
-    Poppins_900Black_Italic,
-  });
-  if (!fontsloaded) {
-    return <AppLoading />;
-  }
+export default function SignUp({ navigation }) {
+  const Stack = createNativeStackNavigator();
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.content}>
@@ -69,10 +48,12 @@ function SignUp() {
           <TextInput style={styles.inputuser} secureTextEntry={true} placeholder="password"></TextInput>
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={() => navigation.navigate("Login")} style={styles.button}>
           <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
-        <Text style={styles.acc}>Already have an account?</Text>
+        <Text onPress={() => navigation.navigate("Login")} style={styles.acc}>
+          Already have an account?
+        </Text>
         <View style={styles.dot}>
           <Image source={require("../assets/Ellipse5.png")} />
           <Image source={require("../assets/Ellipse6.png")} style={{ marginRight: 10, marginLeft: 10 }} />
@@ -82,8 +63,6 @@ function SignUp() {
     </TouchableWithoutFeedback>
   );
 }
-
-export default SignUp;
 
 const styles = StyleSheet.create({
   content: {

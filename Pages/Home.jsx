@@ -22,38 +22,18 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Home = () => {
-  let [fontsloaded, error] = useFonts({
-    Poppins_100Thin,
-    Poppins_100Thin_Italic,
-    Poppins_200ExtraLight,
-    Poppins_200ExtraLight_Italic,
-    Poppins_300Light,
-    Poppins_300Light_Italic,
-    Poppins_400Regular,
-    Poppins_400Regular_Italic,
-    Poppins_500Medium,
-    Poppins_500Medium_Italic,
-    Poppins_600SemiBold,
-    Poppins_600SemiBold_Italic,
-    Poppins_700Bold,
-    Poppins_700Bold_Italic,
-    Poppins_800ExtraBold,
-    Poppins_800ExtraBold_Italic,
-    Poppins_900Black,
-    Poppins_900Black_Italic,
-  });
-  if (!fontsloaded) {
-    return <AppLoading />;
-  }
+export default function Home({ navigation }) {
+  const Stack = createNativeStackNavigator();
   return (
     <ImageBackground source={require("../assets/iponcuy.png")} style={styles.container}>
       <ImageBackground source={require("../assets/gradient.png")} style={styles.gradient}>
         <View style={styles.content}>
           <Text style={styles.judul}>Yo fellas!</Text>
           <Text style={styles.looking}>Looking for something cool?</Text>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity onPress={() => navigation.navigate("Login")} style={styles.button}>
             <Text style={styles.buttonText}>Get Started</Text>
           </TouchableOpacity>
           <View style={styles.dot}>
@@ -65,9 +45,7 @@ const Home = () => {
       </ImageBackground>
     </ImageBackground>
   );
-};
-
-export default Home;
+}
 
 const styles = StyleSheet.create({
   content: {

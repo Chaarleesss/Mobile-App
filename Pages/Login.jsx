@@ -24,31 +24,11 @@ import {
 } from "@expo-google-fonts/poppins";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-function Login() {
-  let [fontsloaded, error] = useFonts({
-    Poppins_100Thin,
-    Poppins_100Thin_Italic,
-    Poppins_200ExtraLight,
-    Poppins_200ExtraLight_Italic,
-    Poppins_300Light,
-    Poppins_300Light_Italic,
-    Poppins_400Regular,
-    Poppins_400Regular_Italic,
-    Poppins_500Medium,
-    Poppins_500Medium_Italic,
-    Poppins_600SemiBold,
-    Poppins_600SemiBold_Italic,
-    Poppins_700Bold,
-    Poppins_700Bold_Italic,
-    Poppins_800ExtraBold,
-    Poppins_800ExtraBold_Italic,
-    Poppins_900Black,
-    Poppins_900Black_Italic,
-  });
-  if (!fontsloaded) {
-    return <AppLoading />;
-  }
+export default function Home({ navigation }) {
+  const Stack = createNativeStackNavigator();
+
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.content}>
@@ -64,10 +44,12 @@ function Login() {
           <TextInput style={styles.inputuser} secureTextEntry={true} placeholder="password"></TextInput>
         </View>
         <Text style={styles.pass}>Forgot password?</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={() => navigation.navigate("MainPages")} style={styles.button}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <Text style={styles.acc}>Don't have an account?</Text>
+        <Text onPress={() => navigation.navigate("SignUp")} style={styles.acc}>
+          Don't have an account?
+        </Text>
         <View style={styles.img}>
           <Image source={require("../assets/gugel.png")} style={{ marginRight: 30 }} />
           <Image source={require("../assets/pesbuk.png")} />
@@ -81,8 +63,6 @@ function Login() {
     </TouchableWithoutFeedback>
   );
 }
-
-export default Login;
 
 const styles = StyleSheet.create({
   content: {
