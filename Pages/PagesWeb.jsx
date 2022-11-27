@@ -4,7 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { BiSearch } from "react-icons/bs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-function MainPages({ navigation }) {
+function PagesWeb({ navigation }) {
   const Stack = createNativeStackNavigator();
 
   return (
@@ -64,7 +64,7 @@ function MainPages({ navigation }) {
   );
 }
 
-export default MainPages;
+export default PagesWeb;
 
 const styles = StyleSheet.create({
   profile: {
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     fontSize: 11,
     fontWeight: "bold",
+    color: "blue",
   },
   Application: {
     marginLeft: 12,
@@ -129,7 +130,6 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontSize: 11,
     fontWeight: "bold",
-    color: "blue",
   },
 
   MainPages: {
