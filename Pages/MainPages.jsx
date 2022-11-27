@@ -2,13 +2,16 @@ import React from "react";
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity, LinearGradient, Image, TextInput, Keyboard, TouchableWithoutFeedback, ScrollView } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { BiSearch } from "react-icons/bs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-function MainPages() {
+function MainPages({ navigation }) {
+  const Stack = createNativeStackNavigator();
+
   return (
     <ScrollView>
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={styles.container}>
-          <Image style={styles.profile} source={require("../assets/charles.jpg")} />
+          <Image onPress={() => navigation.navigate("Profile")} style={styles.profile} source={require("../assets/charles.jpg")} />
           <Text style={styles.welcome}>Welcome back Charles!</Text>
           <Text style={styles.explore}>Explore the Rpl’s leading{"\n"}design portfolios</Text>
           <View style={styles.bar}>
