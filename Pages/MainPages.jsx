@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontSize: 11,
     fontWeight: "bold",
-    color: "blue",
+    color: "#CD113B",
   },
 
   MainPages: {
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   },
   Main: {
     marginTop: 20,
-    marginLeft: 10,
+    marginLeft: 15,
   },
   onejudul: {
     fontSize: 20,

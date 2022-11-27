@@ -31,6 +31,9 @@ function Profile({ navigation }) {
   return (
     <View style={styles.all}>
       <View style={styles.info}>
+        <View style={styles.back}>
+          <AntDesign onPress={() => navigation.navigate("MainPages")} name="arrowleft" size={24} color="black" />
+        </View>
         <Text style={styles.prof}>Profile</Text>
         <Image style={styles.profile} source={require("../assets/charles.jpg")} />
         <Text style={styles.nama}>Charles Andriansyah</Text>
@@ -60,11 +63,14 @@ const styles = StyleSheet.create({
   prof: {
     fontSize: 30,
     marginLeft: 140,
-    marginTop: 40,
     color: "white",
     fontWeight: "600",
   },
-  info: { backgroundColor: "#2C2121", borderRadius: 20, paddingBottom: 50 },
+  back: {
+    marginTop: 50,
+    marginLeft: 20,
+  },
+  info: { backgroundColor: "#2C2121", borderRadius: 20, paddingBottom: 30 },
   profile: {
     width: 150,
     height: 150,

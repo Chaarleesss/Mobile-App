@@ -36,26 +36,38 @@ function PagesDesign({ navigation }) {
           </View>
           <View style={styles.MainPages}>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar1.png")} />
-              <Text style={styles.onejudul}>Hey Sunshine</Text>
-              <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
+              <Image style={styles.one} source={require("../assets/JuiceApp.png")} />
+              <Text style={styles.onejudul}>Juiceup App</Text>
+              <Text style={styles.onepembuat}>By Fathan Alfaruq</Text>
             </View>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar2.png")} />
-              <Text style={styles.onejudul}>Trandulity</Text>
-              <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
+              <Image style={styles.one} source={require("../assets/BreakfastApp.png")} />
+              <Text style={styles.onejudul}>Breakfast App</Text>
+              <Text style={styles.onepembuat}>By Fathan Alfaruq</Text>
             </View>
           </View>
           <View style={styles.MainPages}>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar3.png")} />
-              <Text style={styles.onejudul}>Hey Sunshine</Text>
-              <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
+              <Image style={styles.one} source={require("../assets/ShakesyApp.png")} />
+              <Text style={styles.onejudul}>Shakesy App</Text>
+              <Text style={styles.onepembuat}>By Fathan Alfaruq</Text>
             </View>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar4.png")} />
-              <Text style={styles.onejudul}>Trandulity</Text>
-              <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
+              <Image style={styles.one} source={require("../assets/FoodyApp.png")} />
+              <Text style={styles.onejudul}>Foody App</Text>
+              <Text style={styles.onepembuat}>By Fathan Alfaruq</Text>
+            </View>
+          </View>
+          <View style={styles.MainPages}>
+            <View style={styles.Main}>
+              <Image style={styles.one} source={require("../assets/BurgeritApp.png")} />
+              <Text style={styles.onejudul}>Burgerit App</Text>
+              <Text style={styles.onepembuat}>By Fathan Alfaruq</Text>
+            </View>
+            <View style={styles.Main}>
+              <Image style={styles.one} source={require("../assets/TravelApp.png")} />
+              <Text style={styles.onejudul}>Travel App</Text>
+              <Text style={styles.onepembuat}>By Fathan Alfaruq</Text>
             </View>
           </View>
         </View>
@@ -114,7 +126,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     fontSize: 11,
     fontWeight: "bold",
-    color: "blue",
+    color: "#CD113B",
   },
   Web: {
     marginLeft: 12,
@@ -137,7 +149,7 @@ const styles = StyleSheet.create({
   },
   Main: {
     marginTop: 20,
-    marginLeft: 10,
+    marginLeft: 15,
   },
   onejudul: {
     fontSize: 20,

@@ -36,25 +36,25 @@ function PagesApp({ navigation }) {
           </View>
           <View style={styles.MainPages}>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar1.png")} />
-              <Text style={styles.onejudul}>Hey Sunshine</Text>
+              <Image style={styles.one} source={require("../assets/Spotify.png")} />
+              <Text style={styles.onejudul}>Spotify</Text>
               <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
             </View>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar2.png")} />
-              <Text style={styles.onejudul}>Trandulity</Text>
+              <Image style={styles.one} source={require("../assets/Dictionary.png")} />
+              <Text style={styles.onejudul}>Dictionary</Text>
               <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
             </View>
           </View>
           <View style={styles.MainPages}>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar3.png")} />
-              <Text style={styles.onejudul}>Hey Sunshine</Text>
+              <Image style={styles.one} source={require("../assets/FRLEJEN.png")} />
+              <Text style={styles.onejudul}>FR Legends</Text>
               <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
             </View>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar4.png")} />
-              <Text style={styles.onejudul}>Trandulity</Text>
+              <Image style={styles.one} source={require("../assets/Twitch.png")} />
+              <Text style={styles.onejudul}>Twitch</Text>
               <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
             </View>
           </View>
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     fontSize: 11,
     fontWeight: "bold",
-    color: "blue",
+    color: "#CD113B",
   },
   Graphic: {
     marginLeft: 20,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   },
   Main: {
     marginTop: 20,
-    marginLeft: 10,
+    marginLeft: 20,
   },
   onejudul: {
     fontSize: 20,

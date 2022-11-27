@@ -36,25 +36,20 @@ function PagesWeb({ navigation }) {
           </View>
           <View style={styles.MainPages}>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar1.png")} />
-              <Text style={styles.onejudul}>Hey Sunshine</Text>
-              <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
+              <Image style={styles.one} source={require("../assets/Plant.png")} />
+              <Text style={styles.onejudul}>Plant Fashion</Text>
+              <Text style={styles.onepembuat}>By Fathan Alfaruq</Text>
             </View>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar2.png")} />
-              <Text style={styles.onejudul}>Trandulity</Text>
+              <Image style={styles.one} source={require("../assets/Nuro.png")} />
+              <Text style={styles.onejudul}>Nuro</Text>
               <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
             </View>
           </View>
           <View style={styles.MainPages}>
             <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar3.png")} />
-              <Text style={styles.onejudul}>Hey Sunshine</Text>
-              <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
-            </View>
-            <View style={styles.Main}>
-              <Image style={styles.one} source={require("../assets/Gambar4.png")} />
-              <Text style={styles.onejudul}>Trandulity</Text>
+              <Image style={styles.one} source={require("../assets/Dessert.png")} />
+              <Text style={styles.onejudul}>Planet Dessert</Text>
               <Text style={styles.onepembuat}>By Charles Andriansyah</Text>
             </View>
           </View>
@@ -119,7 +114,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     fontSize: 11,
     fontWeight: "bold",
-    color: "blue",
+    color: "#CD113B",
   },
   Application: {
     marginLeft: 12,
